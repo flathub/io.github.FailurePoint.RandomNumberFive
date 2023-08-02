@@ -30,7 +30,7 @@
                 {
                     "type" : "git",
                     "url" : "https://github.com/FailurePoint/RandomNumberFive.git",
-                    "commit" : "7657b131c243ed6969073434ae429725cea2bf42"
+                    "commit" : "d527bbd7c5d1e04133bea4a0de7b95a92d565651"
                 }
             ]
         }
