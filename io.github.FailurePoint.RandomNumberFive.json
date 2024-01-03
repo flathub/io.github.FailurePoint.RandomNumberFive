@@ -1,7 +1,7 @@
 {
     "app-id" : "io.github.FailurePoint.RandomNumberFive",
     "runtime" : "org.gnome.Platform",
-    "runtime-version" : "44",
+    "runtime-version" : "45",
     "sdk" : "org.gnome.Sdk",
     "command" : "random-number-five",
     "finish-args" : [
@@ -30,7 +30,7 @@
                 {
                     "type" : "git",
                     "url" : "https://github.com/FailurePoint/RandomNumberFive.git",
-                    "commit" : "d7a07b36cdf074cd4e14adf199f589ec38b3f979"
+                    "commit" : "6abccdff2b10465e368f8757bf4d8e7c339d83f8"
                 }
             ]
         }
