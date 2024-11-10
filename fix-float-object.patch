@@ -1,0 +1,27 @@
+From 25e95a3589df97aef98bfde6d54af3a2431c0163 Mon Sep 17 00:00:00 2001
+From: Sabri Ünal <yakushabb@gmail.com>
+Date: Sun, 10 Nov 2024 21:40:36 +0300
+Subject: [PATCH] Fix 'float' object cannot be interpreted as an integer
+
+---
+ src/main.py | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/src/main.py b/src/main.py
+index 72e3b7a..e8d4f7f 100644
+--- a/src/main.py
++++ b/src/main.py
+@@ -105,8 +105,8 @@ class RandomNumberFiveApplication(Adw.Application):
+             debug.report("create random called from UI")
+         debug.report("creating random number...")
+         self.win.hint.set_text("")
+-        minv = self.win.min_val.get_value()
+-        maxv = self.win.max_val.get_value()
++        minv = int(self.win.min_val.get_value())
++        maxv = int(self.win.max_val.get_value())
+         if minv == maxv:
+             already_found = self.persistant.get_int("easter-egg")
+             self.win.hint.get_style_context().add_class("title-1")
+--
+libgit2 1.7.2
+
