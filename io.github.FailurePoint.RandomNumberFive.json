@@ -35,6 +35,10 @@
                 {
                     "type" : "patch",
                     "path" : "fix-appdata.patch"
+                },
+                {
+                    "type" : "patch",
+                    "path" : "fix-float-object.patch"
                 }
             ]
         }
