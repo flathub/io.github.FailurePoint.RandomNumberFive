@@ -1,0 +1,59 @@
+From 3c2cc20eafb1c8071dd5f6f5ce4f4986ade52e11 Mon Sep 17 00:00:00 2001
+From: Sabri Ünal <yakushabb@gmail.com>
+Date: Sun, 10 Nov 2024 21:06:14 +0300
+Subject: [PATCH] Fix appdata papercuts
+
+- Fix OARS ratings
+- Add missing launchable tag
+- Add the Development and the Utility category
+---
+ data/io.github.FailurePoint.RandomNumberFive.appdata.xml.in | 14 +++++++++++---
+ data/io.github.FailurePoint.RandomNumberFive.desktop.in     |  2 +-
+ 2 files changed, 12 insertions(+), 4 deletions(-)
+
+diff --git a/data/io.github.FailurePoint.RandomNumberFive.appdata.xml.in b/data/io.github.FailurePoint.RandomNumberFive.appdata.xml.in
+index d8c0c56..15f2ebc 100644
+--- a/data/io.github.FailurePoint.RandomNumberFive.appdata.xml.in
++++ b/data/io.github.FailurePoint.RandomNumberFive.appdata.xml.in
+@@ -1,9 +1,9 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+-<component type="desktop">
+-  <id>io.github.FailurePoint.RandomNumberFive.desktop</id>
++<component type="desktop-application">
++  <id>io.github.FailurePoint.RandomNumberFive</id>
+   <metadata_license>CC0-1.0</metadata_license>
+   <project_license>GPL-3.0-or-later</project_license>
+-  <content_rating type="https://odrs.gnome.org/oars"/>
++  <content_rating type="oars-1.1" />
+   <name>Random Number Five</name>
+   <summary>Random number generator for For the Linux desktop!</summary>
+   <description>
+@@ -29,6 +29,14 @@
+   </screenshots>
+   <url type="homepage">https://github.com/FailurePoint/RandomNumberFive</url>
+   <url type="bugtracker">https://github.com/FailurePoint/RandomNumberFive/issues</url>
++  <url type="vcs-browser">https://github.com/FailurePoint/RandomNumberFive</url>
++  <launchable type="desktop-id">io.github.FailurePoint.RandomNumberFive.desktop</launchable>
++  <provides>
++    <id>io.github.FailurePoint.RandomNumberFive.desktop</id>
++  </provides>
++  <replaces>
++    <id>io.github.FailurePoint.RandomNumberFive.desktop</id>
++  </replaces>
+   <releases>
+   <release version="1.2.1" date="2023-12-31">
+       <description>
+diff --git a/data/io.github.FailurePoint.RandomNumberFive.desktop.in b/data/io.github.FailurePoint.RandomNumberFive.desktop.in
+index a020e18..cf83ab4 100644
+--- a/data/io.github.FailurePoint.RandomNumberFive.desktop.in
++++ b/data/io.github.FailurePoint.RandomNumberFive.desktop.in
+@@ -4,5 +4,5 @@ Exec=random-number-five
+ Icon=io.github.FailurePoint.RandomNumberFive
+ Terminal=false
+ Type=Application
+-Categories=GTK;
++Categories=GTK;Utility;Development;
+ StartupNotify=true
+--
+libgit2 1.7.2
+
